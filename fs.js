@@ -1,28 +1,11 @@
 const fs = require("fs");
 
-/*
-console.log('Lee el primer archivo')
-const first = fs.readFileSync("./data/first.txt", "utf-8");
-console.log(first)
+const lecturaArchivo = fs.readFileSync('./data/first.txt', 'utf-8')
+console.log(lecturaArchivo)
 
-console.log('Por mientras realizo otro proceso')
-console.log('Leer el segundo archivo')
-const second = fs.readFileSync('./data/first.txt', 'utf-8') 
-console.log(second) */ 
+const content = 'Este es el content del nuevo archivo'
 
-
-//const title = "New content";
-//fs.writeFileSync("./data/second.txt", title); 
-
-console.log('Lee el primer archivo')
-fs.readFile('./data/first.txt', 'utf-8', (err,text) => {
-    console.log(text)
-})
-
-console.log('Por mientras realizo otro proceso')
-console.log('Leer el segundo archivo')
-
-fs.readFile('./data/second.txt', 'utf-8', (err,text) => {
-    console.log(text)
+fs.writeFileSync('./data/third.txt', content, {
+    flag: 'a'
 })
 

@@ -11,6 +11,10 @@ function multiply(x,y){
     return x * y
 }
 
+function imprimirResultado(result){
+    console.log('El resultado de la operacion es: ' + result)
+}
+
 module.exports = {
     add,
     subtract,
